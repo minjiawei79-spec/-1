@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>杂货屋论文 - 在线投稿</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">
+        <span class="logo-main">杂货屋论文</span>
+        <span class="logo-sub">在线投稿示例页面</span>
+      </div>
+      <nav class="nav">
+        <a href="index.html" class="nav-link">首页</a>
+        <a href="issue-3.html" class="nav-link">第 3 期</a>
+        <a href="issue-2.html" class="nav-link">第 2 期</a>
+        <a href="issue-1.html" class="nav-link">第 1 期</a>
+        <a href="submit.html" class="nav-link active">投稿</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="submit-layout">
+    <div class="container submit-grid">
+      <section class="submit-card">
+        <h2>在线投稿表单（示例）</h2>
+        <p>
+          本页面演示前端投稿表单样式与基本校验逻辑。实际环境下可将表单提交至后端系统或邮箱。
+        </p>
+        <form id="submit-form" class="submit-form">
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label">论文标题 <span>*</span></label>
+              <input type="text" name="title" placeholder="请输入论文题目" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label">作者姓名 <span>*</span></label>
+              <input type="text" name="author" placeholder="如：张三" required />
+            </div>
+            <div class="form-field">
+              <label class="form-label">联系邮箱 <span>*</span></label>
+              <input type="email" name="email" placeholder="example@domain.com" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label class="form-label">所属领域</label>
+              <select name="field">
+                <option value="">请选择</option>
+                <option value="education">教育 · 教学实践</option>
+                <option value="management">管理 · 商业案例</option>
+                <option value="social">社会观察 · 人文</option>
+                <option value="tech">技术应用 · 数字化</option>
+                <option value="other">其他综合</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label class="form-label">拟投期刊</label>
+              <select name="issue">
+                <option value="">编辑安排</option>
+                <option value="3">第 3 期 · 数字生活</option>
+                <option value="2">第 2 期 · 城市与人文</option>
+                <option value="1">第 1 期 · 开刊合集</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">摘要简介</label>
+            <textarea
+              name="abstract"
+              placeholder="简要介绍研究背景、方法与结论，建议 150~300 字。"
+            ></textarea>
+            <span class="helper-text">本示例不做字数限制，可按需修改。</span>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">稿件链接或备注</label>
+            <textarea
+              name="link"
+              placeholder="可填写网盘链接与提取码，或说明将通过邮件发送全文。"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            提交（示例，不真正发送）
+          </button>
+
+          <div class="form-message" aria-live="polite"></div>
+        </form>
+      </section>
+
+      <aside class="submit-hint-card">
+        <h3>投稿须知（示例内容，可自行替换）</h3>
+        <ul>
+          <li>请确保稿件为作者原创，未在其他正式期刊发表。</li>
+          <li>正文建议使用 Word 或 PDF 格式排版，遵循常见学术规范。</li>
+          <li>如包含敏感信息（真实姓名、单位、地点等），请事先做好匿名或脱敏处理。</li>
+          <li>编辑通常会在 7~14 天内通过邮箱反馈初审结果（此处为示例说明）。</li>
+        </ul>
+        <p>
+          当前站点为前端静态示例，不会将表单数据真实发送至服务器，
+          仅用于演示交互流程与页面样式。
+        </p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <h3>杂货屋论文</h3>
+        <p class="footer-text">
+          你可以在现有结构基础上接入后端接口，实现真实的投稿、稿件管理与下载统计功能。
+        </p>
+      </div>
+      <div class="footer-info">
+        <p><a href="index.html" class="text-link">返回首页</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+
